@@ -118,7 +118,9 @@ def generate_database(dirpath, FRmodel, augmentations=4, output_name='database.n
                 if i>0:
                     image = apply_transform(image, num_transform=2)
                 faces, face_pos, img_with_faces = get_faces_from_image(image)
+                print(this_name)
                 if not faces:
+                    print("In no face",this_name)
                     pass
                 else:
                     face = faces[0]
